@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Barbie x Harley Quinn - Auria Moore</title>
+
+    <!-- Extra fade override if you want faster fade -->
+    <style>
+      #mainImage {
+        transition: opacity 0.5s ease-in-out;
+        opacity: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- LEFT SIDE -->
+    <div class="left-row">
+      <div class="column2 hide"></div>
+
+      <div class="column4 center-content">
+        <!-- Pink Buttons -->
+        <div
+          class="button-div center-content"
+          onclick="changeToBarb(); playHiBarbie()"
+        >
+          <img src="images/faces/charwhite.png" class="clickable1" />
+        </div>
+
+        <div
+          class="button-div center-content"
+          onclick="changeToScene(); playSound()"
+        >
+          <img src="images/faces/scenewhite.png" class="clickable1" />
+        </div>
+
+        <div
+          class="button-div center-content"
+          onclick="changeToQuote(); playSound()"
+        >
+          <img src="images/faces/quotewhite2.png" class="clickable1" />
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN IMAGE (Click to Reset) -->
+    <div class="column3 black" onclick="resetImage()">
+      <img id="mainImage" src="images/faces/together.png" />
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right-row">
+      <div class="column5 hide"></div>
+
+      <div class="column4 center-content">
+        <!-- Blue Buttons -->
+        <div
+          class="button-div center-content"
+          onclick="changeToHarleyChar(); playHarleyQuinn()"
+        >
+          <img src="images/faces/characwhite.png" class="clickable1" />
+        </div>
+
+        <div
+          class="button-div center-content"
+          onclick="changeToHarleyScene(); playSound()"
+        >
+          <img src="images/faces/scenebluewhite.png" class="clickable1" />
+        </div>
+
+        <div
+          class="button-div center-content"
+          onclick="changeToHarleyQuote(); playSound()"
+        >
+          <img src="images/faces/quotebluewhite.png" class="clickable1" />
+        </div>
+
+        <audio src="sounds/click.wav" id="my-click"></audio>
+      </div>
+    </div>
+
+    <!-- Extra Sounds -->
+    <audio src="sounds/Voicy_hi barbie (1).mp3" id="hibarbie"></audio>
+    <audio
+      src="sounds/Voicy_Harley quinn nice to meet ya.mp3"
+      id="harleyquinn"
+    ></audio>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+  </body>
+</html>

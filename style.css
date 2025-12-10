@@ -1,0 +1,137 @@
+/* Fullscreen layout */
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  margin: 0;
+  overflow: hidden;
+}
+
+button {
+  width: 30%;
+  height: 40%;
+}
+
+/* Main image fade */
+#mainImage {
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Clickable image effects */
+.clickable1 {
+  filter: brightness(85%) drop-shadow(2px 8px 3px);
+}
+.clickable1:hover {
+  cursor: pointer;
+  filter: brightness(100%) drop-shadow(0 0 10px white);
+  transform: scale(1.04);
+}
+.clickable1:active {
+  filter: drop-shadow(0px 0px 3px);
+  transform: scale(0.98);
+}
+
+/* Combined column sizes */
+.column2,
+.column5,
+.column3,
+.column4 {
+  width: 100%;
+}
+.column2,
+.column5 {
+  height: 80%;
+}
+.column3 {
+  height: 100%;
+}
+.column4 {
+  height: 20%;
+}
+
+/* Left and right side backgrounds */
+.left-row,
+.right-row {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.left-row {
+  background-image: url("images/faces/barbie.png");
+}
+
+.right-row {
+  background-image: url("images/faces/harley.png");
+}
+
+/* Make all images fill parent */
+img {
+  height: 100%;
+  width: 100%;
+}
+
+/* Centering utility */
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Utility colors */
+.translucent {
+  opacity: 0.5;
+}
+.red {
+  background-color: #9d0c13;
+}
+.pink {
+  background-color: #ff42bd;
+}
+.blue {
+  background-color: #b1edeb;
+}
+.grey {
+  background-color: #868686;
+}
+.black {
+  background-color: #000000;
+}
+
+/* Mobile layout */
+@media only screen and (max-width: 600px) {
+  body {
+    display: block;
+  }
+
+  .left-row,
+  .right-row {
+    height: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: none;
+  }
+
+  .left-row {
+    background: rgb(250, 148, 165);
+  }
+
+  .right-row {
+    background: rgb(101, 4, 4);
+  }
+
+  .column3 {
+    height: 87%;
+  }
+
+  .column2,
+  .column5 {
+    display: none;
+  }
+}
